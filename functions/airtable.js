@@ -33,9 +33,10 @@ exports.handler = async (event, context, cb) => {
     // console.log(records)
     const takeout  = records.map((product) => {
       const { id } = product
-      const { title, image, price, description, type } = product.fields
+      const { title, image, price, description, category, spice } = product.fields
       const url = image[0].url
-      return { id, title, url, price, description, type }
+      return { id, title, url, price, description, category, spice }
+      console.log(spice)
     })
     return {
       statusCode: 200,

@@ -22,13 +22,16 @@ const Filters = () => {
   } = useFilterContext()
 
   const categories = getUniqueValues(all_products, 'category')
-  const companies = getUniqueValues(all_products, 'company')
-  const colors = getUniqueValues(all_products, 'colors')
+  // const companies = getUniqueValues(all_products, 'type'
+  const spice = getUniqueValues(all_products, 'spice')
+  
+  // console.log(spice)
+
   return (
     <Wrapper>
       <div className='content'>
         <form onSubmit={(e) => e.preventDefault()}>
-          {/* search input */}
+          {/* search input
           <div className='form-control'>
             <input
               type='text'
@@ -38,7 +41,7 @@ const Filters = () => {
               onChange={updateFilters}
               className='search-input'
             />
-          </div>
+          </div> */}
           {/* end of search input */}
           {/* category */}
           <div className='form-control'>
@@ -51,9 +54,9 @@ const Filters = () => {
                     onClick={updateFilters}
                     type='button'
                     name='category'
-                    className={`${
-                      category === c.toLowerCase() ? 'active' : null
-                    }`}
+                    // className={`${
+                    //   category === c.toLowerCase() ? 'active' : null
+                    // }`}
                   >
                     {c}
                   </button>
@@ -63,7 +66,7 @@ const Filters = () => {
           </div>
           {/* end of category */}
           {/* company */}
-          <div className='form-control'>
+          {/* <div className='form-control'>
             <h5>company</h5>
             <select
               name='company'
@@ -79,10 +82,10 @@ const Filters = () => {
                 )
               })}
             </select>
-          </div>
+          </div> */}
           {/* end of company */}
           {/* colors */}
-          <div className='form-control'>
+          {/* <div className='form-control'>
             <h5>colors</h5>
             <div className='colors'>
               {colors.map((c, index) => {
@@ -117,7 +120,7 @@ const Filters = () => {
                 )
               })}
             </div>
-          </div>
+          </div> */}
           {/* end of colors */}
           {/* price */}
           <div className='form-control'>

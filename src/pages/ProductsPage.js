@@ -11,8 +11,8 @@ const ProductsPage = () => {
           <Filters />
           <div>
             <Sort />
-            <AirtableItems/>
-            {/* <ProductList /> */}
+            {/* <AirtableItems/> */}
+            <ProductList />
           </div>
         </div>
       </Wrapper>
