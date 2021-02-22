@@ -29,14 +29,16 @@ exports.handler = async (event, context, cb) => {
   }
     
   try {
-    const {records} = await airtable.list()
+    const {records} = await airtable.list({
+    maxRecords: 200,
+    })
     // console.log(records)
     const takeout  = records.map((product) => {
       const { id } = product
       const { title, image, price, description, category, spice } = product.fields
       const url = image[0].url
       return { id, title, url, price, description, category, spice }
-      console.log(spice)
+      
     })
     return {
       statusCode: 200,

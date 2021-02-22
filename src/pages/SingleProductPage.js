@@ -72,11 +72,14 @@ export default function SingleProductPage() {
       const {
         title, 
         price, 
-        type,
+        category,
         description, 
         image,
         color,
+      
       } = fields
+
+
 
       // console.log(product)
       
@@ -96,7 +99,7 @@ export default function SingleProductPage() {
            <p className="desc">{description}</p>
            <p className="info">
               <span>Type:</span>
-              {type}
+              {category}
            </p>
            <hr/>
            {/* <AddToCart product={product}/> */}
