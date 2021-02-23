@@ -18,6 +18,7 @@ import CartContent from './CarContent'
 import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
 import AirtableItems from './AirtableItems'
+import OurServices from './OurServices'
 export {
   FeaturedProducts,
   Navbar,
@@ -39,4 +40,5 @@ export {
   PageHero,
   StripeCheckout,
   AirtableItems,
+  OurServices,
 }
