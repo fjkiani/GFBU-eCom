@@ -14,7 +14,7 @@ const OurServices = () => {
                 <article key={id}>
                   <span>{icon}</span>
                   <h4>{label}</h4>
-                  <p>{text}</p>
+                  {/* <p>{text}</p> */}
                 </article>
               )
             })}
