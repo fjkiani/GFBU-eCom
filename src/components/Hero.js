@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import hero from '../assets/hero.png'
 import hero2 from '../assets/hero2.png'
+
 const Hero = () => {
   return (
     <Wrapper className='section-center'>
@@ -34,7 +35,6 @@ const Wrapper = styled.section`
   .img-container {
     display: none;
   }
-
   p {
     line-height: 2;
     max-width: 45em;

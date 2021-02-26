@@ -4,6 +4,7 @@ import CartButtons from './CartButtons'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
 import Hero from './Hero'
+import HeroTest from './HeroTest'
 import Services from './Services'
 import Contact from './Contact'
 import Loading from './Loading'
@@ -26,6 +27,7 @@ export {
   Footer,
   Sidebar,
   Hero,
+  HeroTest,
   Services,
   Contact,
   Loading,
