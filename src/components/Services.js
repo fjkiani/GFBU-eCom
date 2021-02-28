@@ -11,10 +11,10 @@ const Services = () => {
       <div className="section-center">
         {services.map(({ id, icon, label, text }) => {
           return (
-            <article key={id}>
+            <article className="service" key={id}>
               <span>{icon}</span>
               <h4>{label}</h4>
-              {/* <p>{text}</p> */}
+              <p>{text}</p>
             </article>
           )
         })}
@@ -28,19 +28,29 @@ const Wrapper = styled.section`
     display: grid;
     gap: 2rem;
     /* safari workaround */
-    grid-gap: 12rem;
+    // grid-gap: 12rem;
+    grid-gap: 10rem;
+    width: 100%;
+    text-align: center;
     .icon {
       font-size: 4rem;
       color: var(--clr-primary-5);
       margin-bottom: 1rem;
-      width: 70%;
+      width: 50%;
+    }
+    .service{
+      width: 80% ;
+    }
+    .service:hover p {
+      color: black;
     }
     h4 {
       text-transform: uppercase;
       font-weight: 500;
+      font-size: 15px;
     }
     p {
-      color: var(--clr-grey-3);
+      color: white;
       max-width: 35em;
     }
     @media (min-width: 100px) {
@@ -50,7 +60,7 @@ const Wrapper = styled.section`
     }
     @media (min-width: 768px) {
       grid-template-columns: repeat(1, 1fr 1fr 1fr);
-      width: 70%;
+      width: auto;
     }
     @media (min-width: 992px) {
       grid-template-columns: repeat(3, 1fr);

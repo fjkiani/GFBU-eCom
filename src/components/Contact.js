@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className='section-center'>
-        <h3>Join our newsletter and get 20% off</h3>
+        <h3>Join our newsletter for recipes </h3>
         <div className='content'>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
@@ -27,7 +27,7 @@ const Contact = () => {
   )
 }
 const Wrapper = styled.section`
-  padding: 5rem 0;
+  padding: 20px 0;
   h3 {
     text-transform: none;
   }
@@ -86,9 +86,9 @@ const Wrapper = styled.section`
       margin-bottom: 0;
     }
   }
-  @media (min-width: 1280px) {
-    padding: 15rem 0;
-  }
+  // @media (min-width: 1280px) {
+  //   padding: 15rem 0;
+  // }
 `
 
 export default Contact

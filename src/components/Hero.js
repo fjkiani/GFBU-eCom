@@ -9,8 +9,8 @@ const Hero = () => {
     <Wrapper className='section-center'>
       <article className='content'>
         <h1>
-         Authentic <br />
-          Pakistani Food
+         Tastiest Pakistani Food <br />
+         in New Jersey
         </h1>
         <p>
           By chef Uzma
@@ -48,6 +48,7 @@ const Wrapper = styled.section`
     gap: 8rem;
     h1 {
       margin-bottom: 2rem;
+      font-size: 41px;
     }
     p {
       font-size: 1.25rem;

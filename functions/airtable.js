@@ -35,9 +35,9 @@ exports.handler = async (event, context, cb) => {
     // console.log(records)
     const takeout  = records.map((product) => {
       const { id } = product
-      const { title, image, price, description, category, spice } = product.fields
+      const { title, image, price, description, category, spice, featured } = product.fields
       const url = image[0].url
-      return { id, title, url, price, description, category, spice }
+      return { id, title, url, price, description, category, spice, featured }
       
     })
     return {

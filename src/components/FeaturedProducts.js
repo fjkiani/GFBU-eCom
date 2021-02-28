@@ -13,7 +13,7 @@ const url = '/.netlify/functions/airtable'
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([])
-
+  const [loading, setLoading] = useState(true)
 
   // const {
   //   products_loading: loading,
