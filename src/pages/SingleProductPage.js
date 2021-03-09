@@ -75,13 +75,14 @@ export default function SingleProductPage() {
         category,
         description, 
         image,
-        color,
+        colors,
+        spice,
       
       } = fields
 
 
 
-      // console.log(product)
+      console.log(product)
       
       return (
               
@@ -102,7 +103,7 @@ export default function SingleProductPage() {
               {category}
            </p>
            <hr/>
-           {/* <AddToCart product={product}/> */}
+           <AddToCart product={product}/>
            </section>
          </div>
         </div>

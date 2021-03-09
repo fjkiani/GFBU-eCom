@@ -2,22 +2,35 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaCheck } from 'react-icons/fa'
-// import { useCartContext } from '../context/cart_context'
+import { useCartContext } from '../context/cart_context'
 import AmountButtons from './AmountButtons'
 const AddToCart = ({ product }) => {
   // add to cart
-  // const { addToCart } = useCartContext()
-  const { id, stock, spice } = product
+  const { addToCart } = useCartContext()
+  const { fields } = product
+  const {
+    title, 
+    price, 
+    category,
+    description, 
+    image,
+    colors,
+    spice,
+    id,
   
-  const [mainColor, setMainColor] = useState(spice[0])
+  } = fields
+
+  
+  console.log(colors)
+  const [mainColor, setMainColor] = useState(colors[0])
   const [amount, setAmount] = useState(1)
 
   const increase = () => {
     setAmount((oldAmount) => {
       let tempAmount = oldAmount + 1
-      if (tempAmount > stock) {
-        tempAmount = stock
-      }
+      // if (tempAmount > stock) {
+      //   tempAmount = stock
+      // }
       return tempAmount
     })
   }
@@ -35,11 +48,17 @@ const AddToCart = ({ product }) => {
       <div className='colors'>
         <span>spice level :</span>
         <div>
-          {spice.map((color, index) => {
+          {colors.map((color, index) => {
             return (
               <button
-                key={index}>{index}
-        
+                key={index}
+                style={{ background: color }}
+                className={`${
+                  mainColor === color ? 'color-btn active' : 'color-btn'
+                }`}
+                onClick={() => setMainColor(color)}
+              >
+                {mainColor === color ? <FaCheck /> : null}
               </button>
             )
           })}
@@ -51,14 +70,14 @@ const AddToCart = ({ product }) => {
           decrease={decrease}
           amount={amount}
         />
-{/* 
-        <Link
-          to='/cart'
-          className='btn'
-          onClick={() => addToCart(id, mainColor, amount, product)}
-        >
-          add to cart
-        </Link> */}
+
+         <Link
+           to='/cart'
+           className='btn'
+           onClick={() => addToCart(id, colors, amount, title, price, product)}
+         >
+           add to cart
+         </Link> 
       </div>
     </Wrapper>
   )
