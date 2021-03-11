@@ -36,7 +36,7 @@ const OurServices = () => {
         font-size: 4rem;
         color: var(--clr-primary-5);
         margin-bottom: 1rem;
-        width: 50%;
+        width: 100%;
       }
       .service{
         width: 80% ;
@@ -63,7 +63,7 @@ const OurServices = () => {
         width: auto;
       }
       @media (min-width: 992px) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 10rem;
       }
       @media (min-width: 1200px) {

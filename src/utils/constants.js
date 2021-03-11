@@ -23,6 +23,6 @@ export const links = [
 ]
 
 
-export const products_url = '/.netlify/functions/airtable'
+export const products_url = 'https://kind-brahmagupta-28a5ed.netlify.app/api/products'
 
-export const single_product_url = `/.netlify/functions/airtable?id=`
+export const single_product_url = `https://kind-brahmagupta-28a5ed.netlify.app/api/products?id=`

@@ -1,39 +1,68 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styles from "../css/footer.module.css"
+import { Link } from 'react-router-dom'
+import { links } from '../utils/constants'
+import hours from '../utils/hours'
+import socialLinks from "../utils/social-links"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 const Footer = () => {
   return (
-    <Container>
-      <h5>
-        &copy; {new Date().getFullYear()}
-        <span> ComfySloth </span>
-      </h5>
-      <h5>All rights reserved</h5>
-    </Container>
+
+    <footer className={styles.footer}>
+      <div className={styles.links}>
+        {links.map((item, index) => {
+          return (
+            <Link fade key={index} to={item.path}>
+              {item.text}
+            </Link>
+          )
+        })}
+      </div>
+      <div className={styles.icons}>
+        {socialLinks.map((item, index) => {
+          return (
+            <a
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.icon}
+              {item.text}
+            </a>
+          )
+        })}
+      </div>
+      <div className={styles.links}>
+      <h5>Contact Details:</h5>
+          <p>2070 US-1, North Brunswick Township, NJ 08902</p>
+          <br/>
+        <p>(732) 658-1188</p>    
+        <p><a href="mailto:goodfoodbyuzma@gmail.com">goodfoodbyuzma@gmail.com</a></p>
+      </div>
+      <div className={styles.contact}>
+        {hours.map((item, index) => {
+          return (
+            <a 
+            key={index}
+            >
+            {item.text}
+            <br/>
+            {item.hours}
+            <br/>
+            </a>
+          )
+        })}
+      </div>
+  
+      <hr/><br/>
+      <div className={styles.copyright}>
+        copyright &copy; Good Food By Uzma  {new Date().getFullYear()} all
+        rights reserved
+      </div>
+    </footer>
   )
 }
-
-const Container = styled.footer`
-  height: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--clr-black);
-  text-align: center;
-  span {
-    color: var(--clr-primary-5);
-  }
-  h5 {
-    color: var(--clr-white);
-    margin: 0.1rem;
-
-    font-weight: 400;
-    text-transform: none;
-    line-height: 1.25;
-  }
-  @media (min-width: 776px) {
-    flex-direction: row;
-  }
-`
 
 export default Footer

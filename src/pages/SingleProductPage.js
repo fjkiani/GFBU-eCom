@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react'
-import axios from 'axios'
-import { useState } from 'react'
-
 import { useParams, useHistory } from 'react-router-dom'
 import { useProductsContext } from '../context/products_context'
 import { single_product_url as url } from '../utils/constants'
@@ -16,11 +13,9 @@ import {
 } from '../components'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
-export default function SingleProductPage() {
-
-  const {id} = useParams()
-  const history = useHistory ()
+const SingleProductPage = () => {
+  const { id } = useParams()
+  const history = useHistory()
   const {
     single_product_loading: loading,
     single_product_error: error,
@@ -28,89 +23,61 @@ export default function SingleProductPage() {
     fetchSingleProduct,
   } = useProductsContext()
 
-  useEffect(()=> {
+  useEffect(() => {
     fetchSingleProduct(`${url}${id}`)
-  },[id])
-
-
-  // serverless function youtube example but doesn't work
-  // const [product, setProduct] = useState(null)
-  // const { productID } = useParams()
-
-
-  // const fetchData = async () => {
-  //   try {
-  //     const { data } = await axios.get(`/.netlify/functions/airtable?id=${productID}`)
-  //     setProduct(data)
-  //   } catch (error) {}
-  //   // setLoading(false)
-  // }
-  
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
-
-
-  //set up effect for error 
+    // eslint-disable-next-line
+  }, [id])
   useEffect(() => {
     if (error) {
-      setTimeout(()=> {
+      setTimeout(() => {
         history.push('/')
-      },3000)
-     }
-    }, [error])
-  
-    if (loading) {
-    return <Loading/>
-  }
-    if (error) {
-      return <Error/>
+      }, 3000)
     }
+    // eslint-disable-next-line
+  }, [error])
+  if (loading) {
+    return <Loading />
+  }
+  if (error) {
+    return <Error />
+  }
 
-      // console.log(product)
-      const {fields} = product
-      const {
-        title, 
-        price, 
-        category,
-        description, 
-        image,
-        colors,
-        spice,
-      
-      } = fields
+  const {
+    title,
+    price,
+    description,
+    id:
+    company,
+    image,
+  } = product.fields
 
-
-
-      console.log(product)
-      
-      return (
-              
-      <Wrapper>
-        <PageHero title={title} product />
-        <div className='section section-center page'>
+  console.log(product)
+  return (
+    <Wrapper>
+      <PageHero title={title} product />
+      <div className='section section-center page'>
         <Link to='/products' className='btn'>
           back to products
         </Link>
-        <div className="product-center">
-           <ProductImages images={image} />
-           <section className="content">
+        <div className='product-center'>
+          <ProductImages images={image} />
+          <section className='content'>
             <h2>{title}</h2>
-           <h5 className="price">{price}</h5>
-           <p className="desc">{description}</p>
-           <p className="info">
-              <span>Type:</span>
-              {category}
-           </p>
-           <hr/>
-           <AddToCart product={product}/>
-           </section>
-         </div>
+            {/* <Stars stars={stars} reviews={reviews} /> */}
+            <h5 className='price'>{formatPrice(price)}</h5>
+            <p className='desc'>{description}</p>
+            {/* <p className='info'>
+              <span>Available : </span>
+              {stock > 0 ? 'In stock' : 'out of stock'}
+            </p> */}
+            <hr />
+            <AddToCart product={product} />
+          </section>
         </div>
-      </Wrapper>
-      )
+      </div>
+    </Wrapper>
+  )
 }
-
 
 const Wrapper = styled.main`
   .product-center {
@@ -144,3 +111,5 @@ const Wrapper = styled.main`
     }
   }
 `
+
+export default SingleProductPage

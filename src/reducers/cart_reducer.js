@@ -26,10 +26,10 @@ const cart_reducer = (state, action) => {
     } else {
       const newItem = {
         id: id + color,
-        name: product.title,
+        name: product.name,
         color,
-        amount,
-        // image: product.images[0].url,
+        // amount,
+        // image: product.image[0].url,
         price: product.price,
         max: product.stock,
       }

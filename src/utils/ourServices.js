@@ -25,13 +25,13 @@ export default [
         text:
           " Brooklyn mustache polaroid neutra. Wolf subway tile gluten-free bushwick, godard letterpress pitchfork direct trade put a bird on",
       },
-      {
-        id: 3,
-        icon: <img src={freeDelivery} className="icon" />,
-        label: "Free Delivery",
-        text:
-          " Brooklyn mustache polaroid neutra. Wolf subway tile gluten-free bushwick, godard letterpress pitchfork direct trade put a bird on",
-      },
+      // {
+      //   id: 3,
+      //   icon: <img src={freeDelivery} className="icon" />,
+      //   label: "Free Delivery",
+      //   text:
+      //     " Brooklyn mustache polaroid neutra. Wolf subway tile gluten-free bushwick, godard letterpress pitchfork direct trade put a bird on",
+      // },
       {
         id: 4,
         icon: <img src={mask} className="icon" />,
@@ -49,7 +49,7 @@ export default [
       {
         id: 6,
         icon: <img src={curbside} className="icon" />,
-        label: "Curbside Pickup",
+        label: "Delivery",
         text:
           " Brooklyn mustache polaroid neutra. Wolf subway tile gluten-free bushwick, godard letterpress pitchfork direct trade put a bird on",
       },

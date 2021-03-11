@@ -1,30 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
 import { PageHero } from '../components'
-import hero2 from '../assets/hero2.png'
+import logo from '../assets/logo.png'
 
 const AboutPage = () => {
   return (
     <main>
       <PageHero title='about' />
       <Wrapper className='page section section-center'>
-        <img src={hero2} alt='nice desk' />
+        <img src={logo} alt='nice desk' />
         <article>
           <div className='title'>
             <h2>our story</h2>
             <div className='underline'></div>
           </div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            accusantium sapiente tempora sed dolore esse deserunt eaque
-            excepturi, delectus error accusamus vel eligendi, omnis beatae.
-            Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque
-            dolore, obcaecati incidunt sequi blanditiis est exercitationem
-            molestiae delectus saepe odio eligendi modi porro eaque in libero
-            minus unde sapiente consectetur architecto. Ullam rerum, nemo iste
-            ex, eaque perspiciatis nisi, eum totam velit saepe sed quos
-            similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
-            iste.
+          started long before we knew the ending. Our namesake, Uzma, never intended to be a chef- she actually didn't learn to cook until she was married. It was circumstance that led her to discover her talent, and practice that refined it. And this talent is what inspired our restaurant- our family's labour of love, built with our hands and without a blueprint.
+          </p>
+          <br/><hr/><br/><br/>
+          <div className='title'>
+            <h4>our mission</h4>
+            <div className='underline'></div>
+          </div>
+          <p>
+          lie in going  back to the roots, using fresh ingredients and a healthy approach to cooking- without compromising taste. It might not be the fanciest, but we can guarantee our food is made with intention, hard work, and a shared love of taste.
+
+          </p>
+          <br/><hr/><br/><br/>
+          <div className='title'>
+            <h4>Our Values</h4>
+            <div className='underline'></div>
+          </div>
+          <p>
+          is to get you the good stuff. We mean the lick-your-plate-clean, just-like-home kind of good. We believe in keeping it simple and focusing on giving you the most authentic experience we can- whether you're looking for a quick take-out spot, a place to sit and eat with loved ones, or catering for a larger party.
           </p>
         </article>
       </Wrapper>
@@ -39,7 +47,7 @@ const Wrapper = styled.section`
     display: block;
     border-radius: var(--radius);
     height: 500px;
-    object-fit: cover;
+    object-fit: contain;
   }
   p {
     line-height: 2;
