@@ -6,6 +6,7 @@ import mask from "../assets/icons/mask.png"
 import temp from "../assets/icons/temp.png"
 import curbside from "../assets/icons/curbside.png"
 import cooking from "../assets/icons/cooking.png"
+import halal from "../assets/icons/halal.png"
 
 
 
@@ -35,6 +36,11 @@ export default [
       },
       {
         id: 6,
+        icon: <img src={halal} className="icon" />,
+        label: "halal",
+      },
+      {
+        id: 7,
         icon: <img src={curbside} className="icon" />,
         label: "Delivery",
       },

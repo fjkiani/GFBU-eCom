@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PageHero, AboutIcons, Hero} from '../components'
+import { PageHero, AboutIcons, Hero, Contact} from '../components'
 import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 import hero2 from '../assets/hero2.jpg'
@@ -38,12 +38,13 @@ const AboutPage = () => {
           is to get you the good stuff. We mean the lick-your-plate-clean, just-like-home kind of good. We believe in keeping it simple and focusing on giving you the most authentic experience we can- whether you're looking for a quick take-out spot, a place to sit and eat with loved ones, or catering for a larger party.
           </p>
         </article>
+        <Contact subTitle="Contact Us"/>
       </Wrapper>
-      <AboutIcons/>
+      {/* <AboutIcons/> */}
       <Wrapper className='section-center'>
-      <Link to='/contact' className='btn hero-btn'>
+      {/* <Link to='/contact' className='btn hero-btn'>
           Contact Us
-        </Link>
+        </Link> */}
       </Wrapper>
     </main>
   )

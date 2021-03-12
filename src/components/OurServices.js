@@ -7,11 +7,11 @@ const OurServices = () => {
     return (
         <Wrapper className="section">
     
-          {/* <Title title="Our Services" /> */}
+          <Title title="Our Services" />
           <div className="section-center">
             {ourServices.map(({ id, icon, label, text }) => {
               return (
-                <article key={id}>
+                <article className="service"  key={id}>
                   <span>{icon}</span>
                   <h4>{label}</h4>
                   {/* <p>{text}</p> */}
@@ -24,7 +24,7 @@ const OurServices = () => {
     }
     const Wrapper = styled.section`
     .section-center {
-      margin-top: 4rem;
+      margin-top: 0rem;
       display: grid;
       gap: 2rem;
       /* safari workaround */
@@ -36,7 +36,7 @@ const OurServices = () => {
         font-size: 4rem;
         color: var(--clr-primary-5);
         margin-bottom: 1rem;
-        width: 100%;
+        width: 50%;
       }
       .service{
         width: 80% ;

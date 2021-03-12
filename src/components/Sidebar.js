@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 import { useProductsContext } from '../context/products_context'
 import { FaTimes } from 'react-icons/fa'
@@ -17,7 +17,7 @@ const Sidebar = () => {
         className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}
       >
         <div className='sidebar-header'>
-          <img src={logo} className='logo' alt='coding addict' />
+          <img src={logo} className='logo' alt='good food by uzma' />
           <button className='close-btn' onClick={closeSidebar}>
             <FaTimes />
           </button>
@@ -40,7 +40,7 @@ const Sidebar = () => {
             </li>
           )}
         </ul>
-        <CartButtons />
+        {/* <CartButtons /> */}
       </aside>
     </SidebarContainer>
   )
