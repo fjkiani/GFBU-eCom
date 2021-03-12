@@ -38,7 +38,7 @@ export const links = [
   {
     id: 7,
     text: 'catering',
-    url: '/#',
+    url: '/catering',
   },
 ]
 

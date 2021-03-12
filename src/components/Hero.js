@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import hero from '../assets/hero.png'
+import hero1 from '../assets/hero1.png'
 import hero2 from '../assets/hero2.png'
 
 const Hero = () => {
@@ -20,8 +20,8 @@ const Hero = () => {
         </Link>
       </article>
       <article className='img-container'>
-        <img src={hero2} alt='nice table' className='main-img' />
-        <img src={hero} alt='person working' className='accent-img' />
+        <img src={hero1} alt='pakistani food' className='main-img' />
+        <img src={hero2} alt='pakistani food' className='accent-img' />
         
       </article>
     </Wrapper>

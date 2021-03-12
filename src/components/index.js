@@ -8,6 +8,7 @@ import HeroTest from './HeroTest'
 import Services from './Services'
 import Contact from './Contact'
 import Loading from './Loading'
+import HeroImage from './HeroImage'
 import Error from './Error'
 import ProductImages from './ProductImages'
 import AddToCart from './AddToCart'
@@ -29,6 +30,7 @@ export {
   Sidebar,
   Hero,
   HeroTest,
+  HeroImage,
   Services,
   Contact,
   Loading,

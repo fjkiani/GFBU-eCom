@@ -11,7 +11,7 @@ const HomePage = () => {
       <Services />
       <hr/>  
       <OurServices/>
-      <Contact />
+      <Contact title="Join our Newsletter for Recipes " subTitle="from Chef Uzma" />
 
     </main>
   )

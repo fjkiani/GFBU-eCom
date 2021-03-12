@@ -1,11 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-const Title = ({ title }) => {
+const Title = ({ title, subTitle }) => {
   return (
     <Wrapper>
       <h2>
-        <span>/</span> {title}
+        <span></span> {title}
+      </h2>
+      <h2>
+        <span></span> {subTitle}
       </h2>
     </Wrapper>
   )

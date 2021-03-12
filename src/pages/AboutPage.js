@@ -12,10 +12,10 @@ const AboutPage = () => {
     <main>
       <PageHero title='about' />
       <Wrapper className='page section section-center'>
-        <img src={logo} alt='nice desk' />
+        <img src={logo} alt='logo' />
         <article>
           <div className='title'>
-            {/* <h2>our story</h2> */}
+            <h4>our story</h4>
             <div className='underline'></div>
           </div>
           <p>
@@ -40,14 +40,20 @@ const AboutPage = () => {
         </article>
       </Wrapper>
       <AboutIcons/>
+      <Wrapper className='section-center'>
+      <Link to='/contact' className='btn hero-btn'>
+          Contact Us
+        </Link>
+      </Wrapper>
     </main>
   )
 }
 const Wrapper = styled.section`
   display: grid;
+  place-items: center;
   gap: 4rem;
   img {
-    width: 100%;
+    width: 50%;
     display: block;
     border-radius: var(--radius);
     height: 500px;
@@ -67,7 +73,8 @@ const Wrapper = styled.section`
     margin-left: 0;
   }
   @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 8em;
   }
 `
 export default AboutPage

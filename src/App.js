@@ -10,6 +10,7 @@ import {
   Contact,
   About,
   Products,
+  Catering,
   PrivateRoute,
 } from './pages'
 function App() {
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route exact path='/contact'>
           <Contact />
+        </Route>
+         <Route exact path='/catering'>
+          <Catering />
         </Route>
         <Route path='/cart'>
           <Cart />

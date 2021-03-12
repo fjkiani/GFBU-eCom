@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-const Contact = () => {
+const Contact = ({title, subTitle}) => {
   return (
     <Wrapper>
       <div className='section-center'>
-        <h3>Join our newsletter for recipes </h3>
+        <h3>{title}</h3>
         <div className='content'>
           <p>
-            From chef uzma
+           {subTitle}
           </p>
           <form className='contact-form'>
             <input
@@ -16,7 +16,7 @@ const Contact = () => {
               placeholder='enter email'
             />
             <button type='submit' className='submit-btn'>
-              subscribe
+              submit
             </button>
           </form>
         </div>
