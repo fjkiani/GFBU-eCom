@@ -2,6 +2,7 @@ import Home from './HomePage'
 import Products from './ProductsPage'
 import SingleProduct from './SingleProductPage'
 import About from './AboutPage'
+import Contact from './ContactPage'
 import Cart from './CartPage'
 import Error from './ErrorPage'
 import Checkout from './CheckoutPage'
@@ -11,6 +12,7 @@ export {
   Home,
   SingleProduct,
   Cart,
+  Contact,
   About,
   Error,
   Checkout,

@@ -13,9 +13,10 @@ const Footer = () => {
       <div className={styles.links}>
         {links.map((item, index) => {
           return (
-            <Link fade key={index} to={item.path}>
+            <a key={index} 
+              href={item.url}>
               {item.text}
-            </Link>
+            </a>
           )
         })}
       </div>

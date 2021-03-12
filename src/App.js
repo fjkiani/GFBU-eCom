@@ -7,6 +7,7 @@ import {
   Cart,
   Checkout,
   Error,
+  Contact,
   About,
   Products,
   PrivateRoute,
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path='/about'>
           <About />
+        </Route>
+        <Route exact path='/contact'>
+          <Contact />
         </Route>
         <Route path='/cart'>
           <Cart />

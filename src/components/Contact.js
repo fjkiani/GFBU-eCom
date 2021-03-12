@@ -7,9 +7,7 @@ const Contact = () => {
         <h3>Join our newsletter for recipes </h3>
         <div className='content'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            sint unde quaerat ratione soluta veniam provident adipisci cumque
-            eveniet tempore?
+            From chef uzma
           </p>
           <form className='contact-form'>
             <input

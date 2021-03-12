@@ -12,13 +12,33 @@ export const links = [
   },
   {
     id: 2,
+    text: 'menu',
+    url: '/products',
+  },
+  {
+    id: 3,
+    text: 'order',
+    url: '/',
+  },
+  {
+    id: 4,
     text: 'about',
     url: '/about',
   },
   {
-    id: 3,
-    text: 'products',
-    url: '/products',
+    id: 5,
+    text: 'contact',
+    url: '/contact',
+  },
+  {
+    id: 6,
+    text: 'reserve',
+    url: '/#',
+  },
+  {
+    id: 7,
+    text: 'catering',
+    url: '/#',
   },
 ]
 

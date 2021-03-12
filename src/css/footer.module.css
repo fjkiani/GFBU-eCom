@@ -1,9 +1,11 @@
 .footer {
-    margin-top: auto;
-    /* background: var(--mainBlack); */
-    padding: 2rem;
-    text-align: center;
-    color: #263300;
+  margin-top: auto;
+  /* background: var(--mainBlack); */
+  padding: 2rem;
+  text-align: center;
+  color: #263300;
+  border-style: inset;
+  background-color: #ffe6b3;
   }
   .links a {
     display: inline-block;

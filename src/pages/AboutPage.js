@@ -1,7 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PageHero } from '../components'
+import { PageHero, AboutIcons, Hero} from '../components'
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
+import hero2 from '../assets/hero2.jpg'
+
+
 
 const AboutPage = () => {
   return (
@@ -11,7 +15,7 @@ const AboutPage = () => {
         <img src={logo} alt='nice desk' />
         <article>
           <div className='title'>
-            <h2>our story</h2>
+            {/* <h2>our story</h2> */}
             <div className='underline'></div>
           </div>
           <p>
@@ -24,7 +28,6 @@ const AboutPage = () => {
           </div>
           <p>
           lie in going  back to the roots, using fresh ingredients and a healthy approach to cooking- without compromising taste. It might not be the fanciest, but we can guarantee our food is made with intention, hard work, and a shared love of taste.
-
           </p>
           <br/><hr/><br/><br/>
           <div className='title'>
@@ -36,6 +39,7 @@ const AboutPage = () => {
           </p>
         </article>
       </Wrapper>
+      <AboutIcons/>
     </main>
   )
 }

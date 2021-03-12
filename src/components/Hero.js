@@ -13,7 +13,7 @@ const Hero = () => {
          in New Jersey
         </h1>
         <p>
-          Authentic Pakistani Cuisine 
+          Authentic Cuisine 
         </p>
         <Link to='/products' className='btn hero-btn'>
           Order online

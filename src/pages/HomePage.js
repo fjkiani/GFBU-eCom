@@ -9,7 +9,7 @@ const HomePage = () => {
       <Hero title="hello"/>
       <FeaturedProducts />
       <Services />
-  
+      <hr/>  
       <OurServices/>
       <Contact />
 

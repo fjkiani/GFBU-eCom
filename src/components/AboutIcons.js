@@ -1,20 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 import Title from "./Title"
-import ourServices from "../utils/ourServices"
+import aboutIcons from "../utils/aboutIcons"
 
-const OurServices = () => {
+const AboutIcons = () => {
     return (
         <Wrapper className="section">
     
-          {/* <Title title="Our Services" /> */}
+          <Title title="Our Services" />
           <div className="section-center">
-            {ourServices.map(({ id, icon, label, text }) => {
+            {aboutIcons.map(({ id, icon, label, text }) => {
               return (
                 <article key={id}>
                   <span>{icon}</span>
                   <h4>{label}</h4>
-                  {/* <p>{text}</p> */}
                 </article>
               )
             })}
@@ -71,4 +70,4 @@ const OurServices = () => {
       }
     }
   `
-export default OurServices
+export default AboutIcons

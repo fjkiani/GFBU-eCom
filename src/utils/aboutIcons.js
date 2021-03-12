@@ -8,8 +8,6 @@ import curbside from "../assets/icons/curbside.png"
 import cooking from "../assets/icons/cooking.png"
 
 
-
-
 export default [
     {
       id: 1,
@@ -19,7 +17,7 @@ export default [
     {
         id: 2,
         icon: <img src={terrace} className="icon" />,
-        label: "Outdoor Heated Dining",
+        label: "Outdoor Private Reservations",
       },
       {
         id: 4,

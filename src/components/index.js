@@ -20,6 +20,7 @@ import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
 import AirtableItems from './AirtableItems'
 import OurServices from './OurServices'
+import AboutIcons from './AboutIcons'
 export {
   FeaturedProducts,
   Navbar,
@@ -43,4 +44,5 @@ export {
   StripeCheckout,
   AirtableItems,
   OurServices,
+  AboutIcons,
 }
