@@ -13,6 +13,8 @@ import {
 } from '../components'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+
 const SingleProductPage = () => {
   const { id } = useParams()
   const history = useHistory()
@@ -43,28 +45,27 @@ const SingleProductPage = () => {
   }
 
   const {
-    title,
+    name,
     price,
     description,
-    id:
-    company,
+    id:sku,
     image,
   } = product.fields
 
-  console.log(product)
+  // console.log(product)
   return (
     <Wrapper>
-      <PageHero title={title} product />
+      <PageHero title={name} product />
       <div className='section section-center page'>
         <Link to='/products' className='btn'>
-          back to products
+          back to menu
         </Link>
         <div className='product-center'>
           <ProductImages images={image} />
           <section className='content'>
-            <h2>{title}</h2>
+            <h2>{name}</h2>
             {/* <Stars stars={stars} reviews={reviews} /> */}
-            <h5 className='price'>{formatPrice(price)}</h5>
+            <h5 className='price'>{price}</h5>
             <p className='desc'>{description}</p>
             {/* <p className='info'>
               <span>Available : </span>

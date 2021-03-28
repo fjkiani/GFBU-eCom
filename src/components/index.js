@@ -21,7 +21,9 @@ import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
 import AirtableItems from './AirtableItems'
 import OurServices from './OurServices'
+import Reviews from './Reviews'
 import AboutIcons from './AboutIcons'
+import Accordion from './accordion/Accordion'
 export {
   FeaturedProducts,
   Navbar,
@@ -47,4 +49,6 @@ export {
   AirtableItems,
   OurServices,
   AboutIcons,
+  Accordion,
+  Reviews,
 }

@@ -11,7 +11,7 @@ const AboutPage = () => {
   return (
     <main>
       <PageHero title='about' />
-      <Wrapper className='page section section-center'>
+      <Wrapper className='page-section section-center'>
         <img src={logo} alt='logo' />
         <article>
           <div className='title'>
@@ -75,7 +75,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 992px) {
     grid-template-columns: 1fr;
-    padding: 8em;
+    padding: 0em;
   }
 `
 export default AboutPage

@@ -7,6 +7,8 @@ import temp from "../assets/icons/temp.png"
 import curbside from "../assets/icons/curbside.png"
 import cooking from "../assets/icons/cooking.png"
 import halal from "../assets/icons/halal.png"
+import dumbbell from "../assets/icons/dumbbell.png"
+import shop from "../assets/icons/shop.png"
 
 
 
@@ -43,6 +45,26 @@ export default [
         id: 7,
         icon: <img src={curbside} className="icon" />,
         label: "Delivery",
+      },
+      {
+        id: 8,
+        icon: <img src={terrace} className="icon" />,
+        label: "Outdoor Private Event Space",
+      },
+      {
+        id: 9,
+        icon: <img src={dumbbell} className="icon" />,
+        label: "Meal Prep",
+      },
+      {
+        id: 10,
+        icon: <img src={curbside} className="icon" />,
+        label: "Curbside Pickup",
+      },
+      {
+        id: 12,
+        icon: <img src={shop} className="icon" />,
+        label: "Reduced capacity seating",
       },
       
     ]

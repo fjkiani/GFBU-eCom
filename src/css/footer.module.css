@@ -5,12 +5,13 @@
   text-align: center;
   color: #263300;
   border-style: inset;
-  background-color: #ffe6b3;
+  background-color:  #ffe6cc
+  ;
   }
   .links a {
     display: inline-block;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #263300;
     margin: 0.5rem 1rem;
     letter-spacing: var(--mainSpacing);

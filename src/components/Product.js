@@ -3,17 +3,17 @@ import styled from 'styled-components'
 import { formatPrice } from '../utils/helpers'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-const Product = ({ url, title, price, id }) => {
+const Product = ({ url, name, price, id }) => {
   return (
     <Wrapper>
       <div className='container'>
-        <img src={url} alt={title} />
+        <img src={url} alt={name} />
         <Link to={`/products/${id}`} className='link'>
           <FaSearch />
         </Link>
       </div>
       <footer>
-        <h5>{title}</h5>
+        <h5>{name}</h5>
         <p>{price}</p>
       </footer>
     </Wrapper>

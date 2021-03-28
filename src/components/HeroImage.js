@@ -19,7 +19,7 @@ const HeroWrapper = styled.div`
 //   display: none;
   align-items: center;
   justify-content: center;
-  min-height: ${props => (props.max ? "100vh" : "280vh")};
+  min-height: ${props => (props.max ? "100vh" : "320vh")};
   color: var(--mainWhite);
   background: 
     url(${props => props.img}) center/cover no-repeat;

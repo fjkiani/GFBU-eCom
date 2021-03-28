@@ -3,7 +3,7 @@ const Airtable = require('airtable-node')
 
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base('app8KYi4JU3zJeZiJ')
-  .table('customers')
+  .table('hero')
 
 exports.handler = async (event, context, cb) => {
   const { id } = event.queryStringParameters
@@ -35,13 +35,11 @@ exports.handler = async (event, context, cb) => {
     // console.log(records)
     const takeout  = records.map((product) => {
       const { id } = product
-      const {name, quote, image, stars } = product.fields
+      const { name, image } = product.fields
       const url = image[0].url
-      return { id, name, quote, stars, image}
-      // console.log(product)
+      return { name, image }
       
     })
-    
     return {
       statusCode: 200,
       body: JSON.stringify(takeout),
@@ -54,4 +52,3 @@ exports.handler = async (event, context, cb) => {
     }
   }
 }
-

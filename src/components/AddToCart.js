@@ -10,9 +10,11 @@ const AddToCart = ({ product }) => {
 
 
 
+
   // add to cart
   const { addToCart } = useCartContext()
   const { id, stock, colors, image } = product.fields
+  console.log(product)
   const [mainColor, setMainColor] = useState(colors[0])
   const [amount, setAmount] = useState(1)
 
@@ -37,7 +39,7 @@ const AddToCart = ({ product }) => {
   return (
     <Wrapper>
       <div className='colors'>
-        <span>colors :</span>
+        <span>Spice Level :</span>
         <div>
           {colors.map((color, index) => {
             return (
@@ -61,14 +63,18 @@ const AddToCart = ({ product }) => {
           decrease={decrease}
           amount={amount}
         />
-
-        <Link
+        {/* ///since the cart component is not working currently, this code is being edited out */}
+        {/* <Link
           to='/cart'
           className='btn'
           onClick={() => addToCart(id, mainColor, amount, product)}
         >
           add to cart
-        </Link>
+        </Link> */}
+          <a href="https://www.clover.com/online-ordering/good-food-by-uzma-north-brunswick/" target="_blank" className='btn'
+        >
+          Order
+        </a>
       </div>
     </Wrapper>
   )
@@ -116,6 +122,7 @@ const Wrapper = styled.section`
   .btn {
     margin-top: 1rem;
     width: 140px;
+    text-align:center;
   }
 `
 export default AddToCart
