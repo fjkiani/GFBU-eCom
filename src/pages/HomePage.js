@@ -1,14 +1,15 @@
 import React from 'react'
-import { FeaturedProducts, Hero, Services, Contact, HeroTest, OurServices, Accordion, Reviews } from '../components'
-import hero2 from '../assets/hero2.jpg'
+import { FeaturedProducts, Hero, Services, Contact, HeroTest, OurServices, Accordion, Reviews, SlideShow } from '../components'
+import biryani from '../assets/biryani.png'
 
 const HomePage = () => {
   return (
     <main>
-      {/* <HeroTest img={hero2}/> */}
-      <Hero title="hello"/>
+      <HeroTest img={biryani}/>
+      <Hero/>
       <FeaturedProducts />
       <Services />
+      <SlideShow/>
       <hr/>  
       <OurServices/>
       <Contact title="Join our Newsletter for Recipes " subTitle="from Chef Uzma" />

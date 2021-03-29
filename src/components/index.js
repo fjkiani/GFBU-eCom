@@ -23,6 +23,7 @@ import AirtableItems from './AirtableItems'
 import OurServices from './OurServices'
 import Reviews from './Reviews'
 import AboutIcons from './AboutIcons'
+import SlideShow from './SlideShow'
 import Accordion from './accordion/Accordion'
 export {
   FeaturedProducts,
@@ -51,4 +52,5 @@ export {
   AboutIcons,
   Accordion,
   Reviews,
+  SlideShow,
 }

@@ -1,199 +1,93 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import hero1 from '../assets/hero1.png'
-import hero2 from '../assets/hero2.png'
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi"
-import axios from 'axios'
-
-
-
-const url = '/.netlify/functions/hero'
-
+import biryani from '../assets/biryani.png'
+import qorma from '../assets/qorma.png'
 
 const Hero = () => {
-
-  const [products, setProducts] = useState([])
-  const [index, setIndex] = React.useState(0)
-
-  const fetchData = async () => {
-    try {
-      const { data } = await axios.get(url)
-      setProducts(data)
-      console.log(data)
-    } catch (error) {}
-  }
-
-    useEffect(() => {
-    const lastIndex = products.length - 1;
-    if (index < 0) {
-      setIndex(lastIndex);
-    }
-    if (index > lastIndex) {
-      setIndex(0);
-    }
-  }, [index, products]);
-
- 
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
-
   return (
-    <Wrapper className='section'>
-       <div className="section-center">
-
-      {products.map((product, productIndex)=> {
-    // const { name, type } = item.data
-
-    const {name,image, id } = product
-    const customerImg = image[0].url
-    // console.log(customerImg)
-    
-    let position = 'nextSlide';
-    if (productIndex === index) {
-      position = 'activeSlide';
-    }
-    if (
-      productIndex === index - 1 ||
-      (index === 0 && productIndex === product.length - 1)
-    ) {
-      position = 'lastSlide';
-    }
-
-    return (
-      <article className={position} key={id}>
-
-    
-      
-      <div className="testing">
-      {/* <h2>{name}</h2> */}
-      <img src={customerImg} alt={name} className="images">
-           
-      </img>
-      </div>
-      {/* <FiChevronRight className="icon" /> */}
-
-  
+    <Wrapper className='section-center'>
+      <article className='content'>
+        <h1>
+         Tastiest Pakistani Food <br />
+         in New Jersey
+        </h1>
+        <p>
+          Authentic Cuisine 
+        </p>
+        <Link to='/products' className='btn hero-btn'>
+          Order online
+        </Link>
       </article>
-    )  
-    })}
-      <button className="prev" onClick={() => setIndex(index - 1)}>
-          <FiChevronLeft />
-        </button>
-        <button className="next" onClick={() => setIndex(index + 1)}>
-          <FiChevronRight />
-        </button>
-
-
-    </div>
- </Wrapper>
-    )
-
-  }
-
-
-
-  const Wrapper = styled.div`
-
-  .section-center {
-    margin-top: 4rem;
-    // width: 100vw;
-    height: 100vh;
-    // max-width: 800px;
-    text-align: center;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    .img {
-      // border-radius: 40%;
-      margin-bottom: 1rem;
-      width: 100%;
-    }
-    .images {
-      background-size: cover;
-      background-position: center;
-      width: 165vh!important;
-      height: 45rem;
+      <article className='img-container'>
+        <img src={biryani} alt='pakistani food' className='main-img' />
+        <img src={qorma} alt='pakistani food' className='accent-img' />
+        
+      </article>
+    </Wrapper>
+  )
 }
+
+const Wrapper = styled.section`
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  .img-container {
+    display: none;
+  }
+  p {
+    line-height: 2;
+    max-width: 45em;
+    margin-bottom: 2rem;
+    color: var(--clr-grey-5);
+    font-size: 1rem;
+  }
+  @media (min-width: 992px) {
+    height: calc(100vh - 5rem);
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 41px;
     }
-    h4 {
-      text-transform: uppercase;
-      color: var(--clr-primary-5);
-      margin-bottom: 0.25rem;
+    p {
+      font-size: 1.25rem;
     }
-    .title {
-      text-transform: capitalize;
-      margin-bottom: 0.75rem;
-    }
-    .text {
-      max-width: 45em;
-      margin: 0 auto;
-      line-height: 2;
-      color: var(--clr-grey-5);
-    }
-    .icon {
-      font-size: 3rem;
-      margin-top: 1rem;
-      color: var(--clr-primary-5);
-    }
-    .prev,
-    .next {
-      position: absolute;
-      top: 40vh;
-      transform: translateY(-50%);
-      background: var(--clr-grey-5);
-      color: var(--clr-white);
-      width: 1.25rem;
-      height: 1.25rem;
-      display: grid;
-      place-items: center;
-      border-color: transparent;
+    .hero-btn {
+      padding: 0.75rem 1.5rem;
       font-size: 1rem;
+    }
+    .img-container {
+      display: block;
+      position: relative;
+    }
+    .main-img {
+      width: 100%;
+      height: 550px;
+      position: relative;
       border-radius: var(--radius);
-      cursor: pointer;
-      transition: var(--transition);
+      display: block;
+      object-fit: cover;
     }
-    .prev:hover,
-    .next:hover {
-      background: var(--clr-primary-5);
-    }
-    .prev {
-      left: 0;
-    }
-    .next {
-      right: 0;
-    }
-    @media (min-width: 800px) {
-      .prev,
-      .next {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1.5rem;
-      }
-    }
-    article {
+    .accent-img {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
-     width: 85vw;
-    max-width: 800px;
-      height: 100%;
-      opacity: 0;
-      transition: var(--transition);
+      width: 250px;
+      transform: translateX(-50%);
+      border-radius: var(--radius);
     }
-    article.activeSlide {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    article.lastSlide {
-      transform: translateX(-100%);
-    }
-    article.nextSlide {
-      transform: translateX(100%);
-    }
+    // .img-container::before {
+    //   content: '';
+    //   position: absolute;
+    //   width: 10%;
+    //   height: 80%;
+    //   background: var(--clr-primary-9);
+    //   bottom: 0%;
+    //   left: -8%;
+    //   border-radius: var(--radius);
+    // }
   }
 `
+
 export default Hero
