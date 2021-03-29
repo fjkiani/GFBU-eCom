@@ -115,7 +115,9 @@ const Hero = () => {
     .images {
       background-size: cover;
       background-position: center;
-      width: 146vh;
+      width: 165vh;
+      height: 45rem;
+}
     }
     h4 {
       text-transform: uppercase;
