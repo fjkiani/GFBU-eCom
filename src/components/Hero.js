@@ -115,7 +115,7 @@ const Hero = () => {
     .images {
       background-size: cover;
       background-position: center;
-      width: 165vh;
+      width: 165vh!important;
       height: 45rem;
 }
     }
