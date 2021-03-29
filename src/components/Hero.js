@@ -108,7 +108,7 @@ const Hero = () => {
     display: flex;
     overflow: hidden;
     .img {
-      // border-radius: 50%;
+      // border-radius: 40%;
       margin-bottom: 1rem;
       width: 100%;
     }
