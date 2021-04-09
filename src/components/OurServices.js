@@ -25,6 +25,7 @@ const OurServices = () => {
     const Wrapper = styled.section`
     .section-center {
       margin-top: 0rem;
+      grid-template-columns: repeat(1,1fr 1fr);
       display: grid;
       gap: 2rem;
       /* safari workaround */
@@ -53,11 +54,13 @@ const OurServices = () => {
         color: white;
         max-width: 35em;
       }
-      @media (min-width: 100px) {
-        grid-template-columns: repeat(1, 1fr 1fr 1fr);
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(1,1fr 1fr);
         width: 100%;
         grid-gap: 1rem;
+        margin: 0 1rem;
       }
+
       @media (min-width: 768px) {
         grid-template-columns: repeat(1, 1fr 1fr 1fr);
         width: auto;
@@ -66,9 +69,9 @@ const OurServices = () => {
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 10rem;
       }
-      @media (min-width: 1200px) {
-        grid-template-columns: repeat(1fr);
-      }
+      // @media (min-width: 1200px) {
+      //   grid-template-columns: repeat(1fr);
+      // }
     }
   `
 export default OurServices

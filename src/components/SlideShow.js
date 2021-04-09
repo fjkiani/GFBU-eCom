@@ -101,30 +101,18 @@ const SlideShow = ({title}) => {
 
   .section-center {
     margin-top: 4rem;
-    // width: 100vw;
     height: 100vh;
     // max-width: 800px;
     text-align: center;
     position: relative;
     display: flex;
     overflow: hidden;
-    .img {
-      // border-radius: 40%;
-      margin-bottom: 1rem;
-      width: 100%;
-    }
     .images {
       background-size: cover;
       background-position: center;
       width: 165vh;
       height: 45rem;
-}
-@media (min-width: 400px) {
-  .images 
-    height: 10vh;
-  
-}
-    }
+      }
     h4 {
       text-transform: uppercase;
       color: var(--clr-primary-5);
@@ -201,5 +189,21 @@ const SlideShow = ({title}) => {
       transform: translateX(100%);
     }
   }
+  @media (max-width: 400px) {
+    .images {
+    width: 25rem!important;
+    height: 20rem!important;
+  }
+  .next, .prev {
+    top: 20vh!important;
+  }
+  .section {
+    padding: 1rem 0;
+  }
+  .section-center {
+    height:35vh;
+  }
+}
+  
 `
 export default SlideShow

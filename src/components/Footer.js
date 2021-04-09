@@ -62,6 +62,9 @@ const Footer = () => {
         copyright &copy; Good Food By Uzma  {new Date().getFullYear()} all
         rights reserved
       </div>
+      <br/>
+      <p>This web app is powered by <a target="_blank"
+              rel="noopener noreferrer" href="https://www.fahadkiani.com/"_blank>FJK</a></p>
     </footer>
   )
 }
