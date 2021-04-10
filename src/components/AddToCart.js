@@ -64,13 +64,13 @@ const AddToCart = ({ product }) => {
           amount={amount}
         />
         {/* ///since the cart component is not working currently, this code is being edited out */}
-        {/* <Link
+        <Link
           to='/cart'
           className='btn'
           onClick={() => addToCart(id, mainColor, amount, product)}
         >
           add to cart
-        </Link> */}
+        </Link>
           <a href="https://www.clover.com/online-ordering/good-food-by-uzma-north-brunswick/" target="_blank" className='btn'
         >
           Order
