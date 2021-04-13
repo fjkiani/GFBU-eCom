@@ -6,6 +6,7 @@ import { PageHero, StripeCheckout } from '../components'
 
 import { useCartContext } from '../context/cart_context'
 import { Link } from 'react-router-dom'
+import CloverCheckout from "../components/CloverCheckout";
 
 const CheckoutPage = () => {
   const { cart } = useCartContext()
@@ -22,7 +23,7 @@ const CheckoutPage = () => {
             </Link>
           </div>
         ) : (
-          <StripeCheckout />
+            <CloverCheckout/>
         )}
       </Wrapper>
     </main>

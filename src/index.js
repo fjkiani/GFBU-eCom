@@ -7,6 +7,7 @@ import { FilterProvider } from './context/filter_context'
 import { CartProvider } from './context/cart_context'
 import { UserProvider } from './context/user_context'
 import { Auth0Provider } from '@auth0/auth0-react'
+import {CloverProvider} from "./context/clover_context";
 
 ReactDOM.render(
   <Auth0Provider
@@ -16,6 +17,7 @@ ReactDOM.render(
     cacheLocation='localstorage'
   >
     <UserProvider>
+      <CloverProvider>
       <ProductsProvider>
         <FilterProvider>
           <CartProvider>
@@ -23,6 +25,7 @@ ReactDOM.render(
           </CartProvider>
         </FilterProvider>
       </ProductsProvider>
+      </CloverProvider>
     </UserProvider>
   </Auth0Provider>,
   document.getElementById('root')
