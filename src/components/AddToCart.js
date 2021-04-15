@@ -72,10 +72,6 @@ const AddToCart = ({ product }) => {
         >
           add to cart
         </Link>
-          <a href="https://www.clover.com/online-ordering/good-food-by-uzma-north-brunswick/" target="_blank" className='btn'
-        >
-          Order
-        </a>
       </div>
     </Wrapper>
   )
