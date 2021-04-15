@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Navbar, Sidebar, Footer } from './components'
 import {
@@ -13,7 +13,13 @@ import {
   Catering,
   PrivateRoute,
 } from './pages'
+import {useCloverContext} from "./context/clover_context";
 function App() {
+  const cloverContext = useCloverContext()
+  useEffect(() => {
+    cloverContext.initCloverConnection()
+    cloverContext.connectToCloverDevice(process.env.REACT_APP_CLOVER_URI, null)
+  }, [])
   return (
     <Router>
       <Navbar />
