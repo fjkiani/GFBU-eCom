@@ -15,13 +15,13 @@ const Hero = () => {
         <p>
           Authentic Cuisine 
         </p>
-        {/* <Link to='/products' className='btn hero-btn'>
+        <Link to='/products' className='btn hero-btn'>
           Order online
-        </Link> */}
-            <a href="https://www.clover.com/online-ordering/good-food-by-uzma-north-brunswick/" target="_blank" className='btn'
+        </Link>
+            {/* <a href="https://www.clover.com/online-ordering/good-food-by-uzma-north-brunswick/" target="_blank" className='btn'
         >
           Order online
-        </a>
+        </a> */}
       </article>
       <article className='img-container'>
         <img src={biryani} alt='pakistani food' className='main-img' />
