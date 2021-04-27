@@ -25,6 +25,7 @@ import Reviews from './Reviews'
 import AboutIcons from './AboutIcons'
 import SlideShow from './SlideShow'
 import Accordion from './accordion/Accordion'
+import Catering from './catering/Catering'
 export {
   FeaturedProducts,
   Navbar,
@@ -53,4 +54,5 @@ export {
   Accordion,
   Reviews,
   SlideShow,
+  Catering,
 }

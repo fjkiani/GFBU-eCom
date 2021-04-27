@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 
 const SingleProduct = () => {
-    const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
   const [product, setProduct] = useState(null)
   const { productID } = useParams()
 
